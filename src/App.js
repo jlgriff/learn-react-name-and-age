@@ -6,7 +6,7 @@ import Users from "./components/Users/Users";
 function App() {
   const [users, setUsers] = useState([]);
 
-  const onAddUserHandler = (user) => {
+  const addUserHandler = (user) => {
     setUsers((previousUsers) => {
       return [...previousUsers, user];
     });
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <UserInput onAddUser={onAddUserHandler} />
+      <UserInput onAddUser={addUserHandler} />
       <Users users={users} />
     </div>
   );
